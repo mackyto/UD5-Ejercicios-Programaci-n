@@ -9,7 +9,7 @@
  */
 public class Punto {
     
-    public int x;
-    public int y;
+    int x;
+    int y;
     
 }

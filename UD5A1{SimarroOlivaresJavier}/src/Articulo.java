@@ -7,11 +7,11 @@
  *
  * @author macky
  */
-public class Persona {
+public class Articulo {
     
-    String dni;
     String nombre;
-    String apellidos;
-    int edad;        
+    double precioSinIva;
+    int iva;
+    int existencias;
     
 }

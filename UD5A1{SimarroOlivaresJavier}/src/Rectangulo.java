@@ -4,14 +4,11 @@
  */
 
 /**
- *
+ * 
  * @author macky
  */
-public class Persona {
+public class Rectangulo {
     
-    String dni;
-    String nombre;
-    String apellidos;
-    int edad;        
-    
+    int x1, x2;
+    int y1, y2; 
 }
