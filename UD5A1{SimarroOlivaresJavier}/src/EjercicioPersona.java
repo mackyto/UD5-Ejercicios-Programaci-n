@@ -29,8 +29,8 @@ public class EjercicioPersona {
         
         Scanner kl = new Scanner(System.in); // Declara Instancias Scanner y persona
         
-        Persona persona1 = new Persona();
-        Persona persona2 = new Persona();
+        Persona persona1 = new Persona("","","");
+        Persona persona2 = new Persona("","","");
         
         System.out.print("Indica el nombre de la primera persona: "); // Solicita y assigna valores a los atributos de clase del primer objeto
         persona1.nombre = kl.nextLine();

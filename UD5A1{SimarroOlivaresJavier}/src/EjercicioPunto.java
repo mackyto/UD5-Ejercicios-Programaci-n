@@ -24,15 +24,9 @@ public class EjercicioPunto {
     
     public static void main(String[] args){
         
-        Punto primer = new Punto(); // Inicia las instancias y carga valores a los objetos.
-        primer.x  = 5 ; primer.y = 0;
-
-        Punto segun = new Punto();
-        segun.x  = 10 ; segun.y = 10;
-        
-        Punto tercer = new Punto();
-        tercer.x  = -3 ; tercer.y = 7;
-        
+        Punto primer = new Punto(5,0); // Inicia las instancias y carga valores a los objetos con el constructor.
+        Punto segun = new Punto(10,10);
+        Punto tercer = new Punto(-3,7);
         
         System.out.println("Las coordenadas del primer punto son (" + primer.x + "," + primer.y + ")"); // Imprime los valoresde los objetos. 
         System.out.println("Las coordenadas del segundo punto son (" + segun.x + "," + segun.y + ")");
