@@ -11,8 +11,8 @@
  *      principal instancia un objeto de la clase artículo. Asigna valores a
  *      todos sus atributos (los que quieras) y muestra por pantalla un mensaje
  *      del estilo “Pijama - Precio:10€ - IVA:21% - PVP:12,1€” (el PVP es el
- *      precio Pág. 4 de 10 de venta al público, es decir, el precio con IVA).
- *      Luego, cambia el precio y vuelve a imprimir el mensaje  * 
+ *      precio de venta al público, es decir, el precio con IVA). Luego, cambia
+ *      el precio y vuelve a imprimir el mensaje  * 
  * 
  *              nombre: String
  * 
@@ -29,11 +29,23 @@ public class EjercicioArticulo {
     
     public static void main(String[] args){
         
-        Articulo articulo = new Articulo(); // Isntancia el articulo pijama y assigna valores a sus atributos.
+        Articulo articulo = new Articulo(); // Instancia el objeto pijama y assigna valores a sus atributos.
         articulo.nombre = "Pijama";
         articulo.precioSinIva = 10;
         articulo.iva = 21;
         articulo.existencias= 100;
+        
+        double inflación = 3.5; // declara incremento de precio por inflación general.
+        
+        // Imprime resultados
+        System.out.printf("%s - Precio:%.2f - IVA:%d - PVP %.2f\n\n", articulo.nombre, articulo.precioSinIva, articulo.iva, articulo.precioSinIva + articulo.precioSinIva * articulo.iva /100);
+        
+        //añade inflación al precio
+        articulo.precioSinIva += articulo.precioSinIva * inflación /100;
+        
+        // Imprime resultado con inflación
+        System.out.printf("%s - Precio:%.2f - IVA:%d - PVP %.2f\n\n", articulo.nombre, articulo.precioSinIva, articulo.iva, articulo.precioSinIva + articulo.precioSinIva * articulo.iva /100);
+
         
     }
     
