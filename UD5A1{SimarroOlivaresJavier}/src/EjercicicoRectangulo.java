@@ -26,18 +26,40 @@ public class EjercicicoRectangulo {
 
     public static void main(String[] args){
         
-        Rectangulo recta1 = new Rectangulo(); // Instancia y carga parametros en los objetos rectangulo.
-        recta1.x1 = 0; recta1.y1 = 0;
-        recta1.x2 = 5; recta1.y2 = 5;
+        Rectangulo recta1 = new Rectangulo(0,0,5,5); // Instancia y carga parametros en los objetos rectangulo.
+
         
-        Rectangulo recta2 = new Rectangulo();
-        recta2.x1 = 7; recta2.y1 = 9;
-        recta2.x2 = 2; recta2.y2 = 3;
+        Rectangulo recta2 = new Rectangulo(7,9,2,3);
+
+        // Imprime coordenadas, perímetro y area de los objetos creados.
+        System.out.printf("Rectangulo 1 coordenadas (%d,%d),(%d,%d); Perímetro %dcm, Area %dcm2\n\n",
+        recta1.x1,recta1.y1,recta1.x2,recta1.y2,
+        Math.abs(recta1.x1-recta1.x2)*2+Math.abs(recta1.y1-recta1.y2)*2,
+        Math.abs(recta1.x1-recta1.x2)*Math.abs(recta1.y1-recta1.y2));
         
+        System.out.printf("Rectangulo 2 coordenadas (%d,%d),(%d,%d); Perímetro %dcm, Area %dcm2\n\n",
+        recta2.x1,recta2.y1,recta2.x2,recta2.y2,
+        Math.abs(recta2.x1-recta2.x2)*2+Math.abs(recta2.y1-recta2.y2)*2,
+        Math.abs(recta2.x1-recta2.x2)*Math.abs(recta2.y1-recta2.y2));
+       
+        // Modificación de los parametros de los objetos con valores aceptados.
+        recta1.x1 = 3; recta1.y1 = 2;
+        recta1.x2 =9; recta1.y2 = 6;
         
+        recta2.x1 = 3; recta2.y1 = 7;
+        recta2.x2 = 5; recta2.y2 =9;
         
+        // Imprime coordenadas, perímetro y area de los objetos con los valores modificados.
+        System.out.printf("Rectangulo 1 coordenadas (%d,%d),(%d,%d); Perímetro %dcm, Area %dcm2\n\n",
+        recta1.x1,recta1.y1,recta1.x2,recta1.y2,
+        Math.abs(recta1.x1-recta1.x2)*2+Math.abs(recta1.y1-recta1.y2)*2,
+        Math.abs(recta1.x1-recta1.x2)*Math.abs(recta1.y1-recta1.y2));
         
-        
+        System.out.printf("Rectangulo 2 coordenadas (%d,%d),(%d,%d); Perímetro %dcm, Area %dcm2\n\n",
+        recta2.x1,recta2.y1,recta2.x2,recta2.y2,
+        Math.abs(recta2.x1-recta2.x2)*2+Math.abs(recta2.y1-recta2.y2)*2,
+        Math.abs(recta2.x1-recta2.x2)*Math.abs(recta2.y1-recta2.y2));
+                
     }
     
 }
