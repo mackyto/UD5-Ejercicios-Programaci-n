@@ -16,7 +16,7 @@ public class Articulo {
     
     public Articulo(String nombre, double precioSinIva, int iva, int existencias){
         
-        if(nombre.matches("[a-zA-Z]+") && precioSinIva<){
+        if(nombre.matches("[a-zA-Z]+") && precioSinIva <= 0){
             
         }
         
