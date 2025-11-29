@@ -27,8 +27,6 @@ public class EjercicicoRectangulo {
     public static void main(String[] args){
         
         Rectangulo recta1 = new Rectangulo(0,0,5,5); // Instancia y carga parametros en los objetos rectangulo.
-
-        
         Rectangulo recta2 = new Rectangulo(7,9,2,3);
 
         // Imprime coordenadas, perímetro y area de los objetos creados.
