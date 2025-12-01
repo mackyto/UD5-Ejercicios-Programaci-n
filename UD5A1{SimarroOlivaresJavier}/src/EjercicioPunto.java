@@ -24,23 +24,34 @@ public class EjercicioPunto {
     
     public static void main(String[] args){
         
-        Punto primer = new Punto(5,0); // Inicia las instancias y carga valores a los objetos con el constructor.
+        // Inicia las instancias y carga valores a los objetos con el constructor.
+        Punto primer = new Punto(5,0); 
         Punto segun = new Punto(10,10);
         Punto tercer = new Punto(-3,7);
         
-        System.out.println("Las coordenadas del primer punto son (" + primer.x + "," + primer.y + ")"); // Imprime los valoresde los objetos. 
-        System.out.println("Las coordenadas del segundo punto son (" + segun.x + "," + segun.y + ")");
-        System.out.println("Las coordenadas del tercer punto son (" + tercer.x + "," + tercer.y + ")");
+        // Imprime los valoresde los objetos. 
+        System.out.println("Las coordenadas del primer punto son (" + primer.getPuntoX() + "," + primer.getPuntoY() + ")");
+        System.out.println("Las coordenadas del segundo punto son (" + segun.getPuntoX() + "," + segun.getPuntoY() + ")");
+        System.out.println("Las coordenadas del tercer punto son (" + tercer.getPuntoX() + "," + tercer.getPuntoY() + ")");
         
-        primer.x++ ; primer.y += 13; // modifica los parametros iniciales.
-        segun.x  -= 5 ; segun.y /= 3;
-        tercer.x  *= 5 ; tercer.y = 3;   
+        // modifica los parametros iniciales.
+        primer.setPuntoX(primer.getPuntoX() + 1); 
+        primer.setPuntoY(primer.getPuntoY() + 13);
+        segun.setPuntoX(segun.getPuntoX() - 6); 
+        segun.setPuntoY(segun.getPuntoY() * 3);
+        tercer.setPuntoX(tercer.getPuntoX() / 2); 
+        tercer.setPuntoY(tercer.getPuntoY() - 1);
+       
+        // Separación de objetos.
+        System.out.println();
         
-        System.out.println(); // Separación de objetos.
+        // Imprime valores modificados de los objetos.
+        System.out.println("Las coordenadas modificadas del primer punto son (" + primer.getPuntoX() + "," + primer.getPuntoY() + ")");
+        System.out.println("Las coordenadas modificadas del segundo punto son (" + segun.getPuntoX() + "," + segun.getPuntoY() + ")");
+        System.out.println("Las coordenadas modificadas del tercer punto son (" + tercer.getPuntoX() + "," + tercer.getPuntoY() + ")");
         
-        System.out.println("Las coordenadas modificadas del primer punto son (" + primer.x + "," + primer.y + ")"); // Imprime valores modificados de los objetos.
-        System.out.println("Las coordenadas modificadas del segundo punto son (" + segun.x + "," + segun.y + ")");
-        System.out.println("Las coordenadas modificadas del tercer punto son (" + tercer.x + "," + tercer.y + ")");
+        // Separación de objetos.
+        System.out.println();
         
     }
     

@@ -9,13 +9,29 @@
  */
 public class Punto {
     
-    int x;
-    int y;
+    private int x;
+    private int y;
     
     public Punto(int x, int y){
         this.x =x;
         this.y = y;
         
+    }
+    
+    public void setPuntoX (int x){
+        this.x = x;
+    }
+            
+    public void setPuntoY (int y){
+        this.y = y;
+    }
+    
+    public int getPuntoX (){
+        return x;
+    }
+    
+    public int getPuntoY (){
+        return y;
     }
     
 }
