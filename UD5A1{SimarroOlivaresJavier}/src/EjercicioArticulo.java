@@ -29,11 +29,12 @@ public class EjercicioArticulo {
     
     public static void main(String[] args){
         
-        Articulo articulo = new Articulo(); // Instancia el objeto pijama y assigna valores a sus atributos.
-        articulo.nombre = "Pijama";
-        articulo.precioSinIva = 10;
-        articulo.iva = 21;
-        articulo.existencias= 100;
+        Articulo articulo = new Articulo("Pijama", 10, 21, 100); // Instancia el objeto pijama y assigna valores a sus atributos.
+        
+//        articulo.nombre = "Pijama";
+//        articulo.precioSinIva = 10;
+//        articulo.iva = 21;
+//        articulo.existencias= 100;
         
         double inflación = 3.5; // declara incremento de precio por inflación general.
         
