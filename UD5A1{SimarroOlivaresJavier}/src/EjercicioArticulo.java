@@ -39,14 +39,14 @@ public class EjercicioArticulo {
         double inflación = 3.5; // declara incremento de precio por inflación general.
         
         // Imprime resultados
-        System.out.printf("%s - Precio:%.2f - IVA:%d - PVP %.2f\n\n", articulo.nombre, articulo.precioSinIva, articulo.iva, articulo.precioSinIva + articulo.precioSinIva * articulo.iva /100);
+        System.out.printf("%s - Precio:%.2f - IVA:%d - PVP %.2f\n\n", articulo.getArticulosNombre(), articulo.getArticuloPrecioSinIva(), articulo.getArticuloIva(), articulo.getArticuloPrecioSinIva() + articulo.getArticuloPrecioSinIva() * articulo.getArticuloIva() /100);
         
         //añade inflación al precio
-        articulo.precioSinIva += articulo.precioSinIva * inflación /100;
+        articulo.setArticuloPrecioSinIva(articulo.getArticuloPrecioSinIva() + articulo.getArticuloPrecioSinIva() * inflación /100);
         
         // Imprime resultado con inflación
-        System.out.printf("%s - Precio:%.2f - IVA:%d - PVP %.2f\n\n", articulo.nombre, articulo.precioSinIva, articulo.iva, articulo.precioSinIva + articulo.precioSinIva * articulo.iva /100);
-
+        System.out.printf("%s - Precio:%.2f - IVA:%d - PVP %.2f\n\n", articulo.getArticulosNombre(), articulo.getArticuloPrecioSinIva(), articulo.getArticuloIva(), articulo.getArticuloPrecioSinIva() + articulo.getArticuloPrecioSinIva() * articulo.getArticuloIva() /100);
+        
         
     }
     
