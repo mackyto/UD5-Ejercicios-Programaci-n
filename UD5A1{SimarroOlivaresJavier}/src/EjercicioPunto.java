@@ -62,7 +62,7 @@ public class EjercicioPunto {
         primer.puntoImprime(); segun.puntoImprime(); tercer.puntoImprime();
         
         // Prueba el método distancia.
-        System.out.println("Distancia enttre el punto uno y el punto tres = " + primer.puntoDistancia(tercer.getPuntoX(), tercer.getPuntoY()));
+        System.out.println("Distancia entre el punto uno y el punto tres = " + primer.puntoDistancia(tercer.getPuntoX(), tercer.getPuntoY()));
         
     }
     
