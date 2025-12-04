@@ -17,6 +17,8 @@
  *    (utiliza un println para cada punto). Modifica todas las coordenadas
  *    (prueba distintos operado res como = + - += *=...) y vuelve a imprimirlas
  *    por pantalla
+ * 
+ * 
  *  
  * @author macky
  */
@@ -52,6 +54,15 @@ public class EjercicioPunto {
         
         // Separación de objetos.
         System.out.println();
+        
+        // Prueba el método desplazamiento.
+        primer.puntoDesplaza(3, -2); segun.setPuntoXY(-5, 2); tercer.puntoDesplaza(0, 4);
+
+        // Prueba del método  puntoImpresión.
+        primer.puntoImprime(); segun.puntoImprime(); tercer.puntoImprime();
+        
+        // Prueba el método distancia.
+        System.out.println("Distancia enttre el punto uno y el punto tres = " + primer.puntoDistancia(tercer.getPuntoX(), tercer.getPuntoY()));
         
     }
     
