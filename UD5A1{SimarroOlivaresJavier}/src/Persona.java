@@ -5,6 +5,15 @@
 
 /**
  *
+ * 4.2. Añade a la clase Persona los siguientes métodos públicos: 
+ * 
+ *           • public void imprime() Imprime la información del objeto: “DNI:… Nombre:… etc.” 
+ *           • public boolean esMayorEdad() Devuelve true si es mayor de edad (false si no).
+ *           • public boolean esJubilado() Devuelve true si tiene 65 años o más (false si no).
+ *           • public int diferenciaEdad(Persona p) Devuelve la diferencia de edad entre ‘this’ y p. Pág. 8 de 10
+ * 
+ *      Prueba a utilizar estos métodos desde el main para comprobar su funcionamiento
+ * 
  * @author macky
  */
 public class Persona {
