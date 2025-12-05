@@ -29,19 +29,20 @@ public class EjercicioPersona {
         
         Scanner kl = new Scanner(System.in); // Declara Instancias Scanner y persona
         
-        Persona persona1 = new Persona("","","");
-        Persona persona2 = new Persona("","","");
+        Persona persona1 = new Persona("Jose","Torres Arcilla","12345678Q",69);
+        Persona persona2 = new Persona("","","00000000o");
         
-        System.out.print("Indica el nombre de la primera persona: "); // Solicita y assigna valores a los atributos de clase del primer objeto
-        persona1.setPersonaNombre(kl.nextLine());
-        System.out.print("Indica los apellidos de " + persona1.getPersonaNombre() + ": ");
-        persona1.setPersonaApellidos(kl.nextLine());
-        System.out.print("Indica el dni de " + persona1.getPersonaNombre() + ": ");
-        persona1.setPersonaDni(kl.nextLine());
-        System.out.print("Indica la edad de " + persona1.getPersonaNombre() + ": ");
-        persona1.setPersonaEdad(kl.nextInt());
+        // Solicita y assigna valores a los atributos de clase del primer objeto
+        // System.out.print("Indica el nombre de la primera persona: "); 
+        // persona1.setPersonaNombre(kl.nextLine());
+        // System.out.print("Indica los apellidos de " + persona1.getPersonaNombre() + ": ");
+        // persona1.setPersonaApellidos(kl.nextLine());
+        // System.out.print("Indica el dni de " + persona1.getPersonaNombre() + ": ");
+        // persona1.setPersonaDni(kl.nextLine());
+        // System.out.print("Indica la edad de " + persona1.getPersonaNombre() + ": ");
+        // persona1.setPersonaEdad(kl.nextInt());
         
-        kl.nextLine(); // Elimina el bufer de retorno de carro
+        // kl.nextLine(); // Elimina el bufer de retorno de carro
         
         System.out.print("Indica el nombre de la segunda persona: "); // Solicita y assigna valores a los atributos de clase del segundo objeto
         persona2.setPersonaNombre(kl.nextLine());
@@ -53,12 +54,18 @@ public class EjercicioPersona {
         persona2.setPersonaEdad(kl.nextInt());
 
         System.out.printf("%s %s con DNI %s ", persona1.getPersonaNombre(), persona1.getPersonaApellidos(), persona1.getPersonaDni()); // Imprime los resultados del primer objeto.
-        if (persona1.getPersonaEdad() < 18){System.out.print("no ");}
-        System.out.println("es mayor de edad");
+        if (persona1.esMayorEdad()){System.out.print("no ");}
+        System.out.print("es mayor de edad");
+        if (persona1.esjubilado()){System.out.print(" y es jubilado");}        
+        System.out.println();
         
-        System.out.printf("%s %s con DNI %s ", persona2.getPersonaNombre(), persona2.getPersonaApellidos(), persona2.getPersonaDni()); // Imprime los resultados del segundo objeto.
+        persona2.impresion(); // Imprime los resultados del segundo objeto.
         if (persona2.getPersonaEdad() < 18){System.out.print("no ");}
-        System.out.println("es mayor de edad");
+        System.out.print("es mayor de edad");
+        if (persona1.esjubilado()){System.out.print(" y es jubilado");}   
+        System.out.println();
+        
+        System.out.println("y la diferencia de Edad entre ambos es de " + persona1.diferenciaEdad(persona2.getPersonaEdad()) + " años");
         
         kl.close();
         

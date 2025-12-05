@@ -18,30 +18,36 @@
  */
 public class Persona {
     
+    // Datos almacenados
     private String dni;
     private String nombre;
     private String apellidos;
     private int edad;        
     
-    // Constructor todos los parametros. "[0-9]{8}a-zA-Z"
+    // Constructor todos los parametros. con match "[0-9]{8}a-zA-Z" para el DNi.
     public Persona(String dni, String nombre, String apellidos, int edad){
     
-        this.dni = dni;
+        if (dni.matches("[0-9]{8}[a-zA-Z]")){this.dni = dni;
+        }else{System.err.println("Error al introducir los datos del DNI");
+        this.dni = "NULL";}
         this.nombre = nombre;
         this.apellidos = apellidos;
         this.edad = edad;
         
     }
     
-    public Persona(String dni,String nombre, String apellidos){
+    // Constructor solo datos sin edad y match en DNI.
+    public Persona(String dni, String nombre, String apellidos){
     
-        this.dni = dni;
+        if (dni.matches("[0-9]{8}[a-zA-Z]")){this.dni = dni;
+        }else{System.err.println("Error al introducir los datos del DNI");
+        this.dni = "NULL";}
         this.nombre = nombre;
         this.apellidos = apellidos;
             
     }
     
-    
+    // Setters de entrada
     public void setPersonaNombre (String nombre){
         this.nombre = nombre;}
 
@@ -57,7 +63,7 @@ public class Persona {
         this.edad = edad;}
     
     
-    
+    // Getters de salida
     public String getPersonaNombre (){
         return nombre;}
     
@@ -69,5 +75,25 @@ public class Persona {
     
     public int getPersonaEdad (){
         return edad;}
+    
+    // Impresion de datos.
+    public void impresion(){
+        System.out.printf("%s %s con DNI %s con %d años de edad", nombre, apellidos, dni, edad);
+    }
+    
+    // ¿Mayor de edad?
+    public boolean esMayorEdad (){
+        return (edad >= 18); 
+    }
+   
+    // ¿Es jubilado?
+    public boolean esjubilado (){
+        return (edad >= 65); 
+    }
+         
+    public int diferenciaEdad (int edad){
+        return Math.abs(this.edad - edad);
+        
+    }
     
 }
