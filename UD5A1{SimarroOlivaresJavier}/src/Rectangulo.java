@@ -5,13 +5,25 @@
 
 /**
  * 
+ * 4.3. Añade a la clase Rectángulo métodos públicos con las siguientes 
+ *      funcionalidades: 
+ *      
+ *          • Método para imprimir la información del rectángulo por pantalla. 
+ *          • Métodos setters dobles y cuadruples: setX1Y1, set X2Y2 y setAll(…)
+ *          • Métodos getPerimetro y getArea que calculen y devuelvan el perímetro y área del objeto.
+ * 
+ *      Prueba a utilizar estos métodos desde el main para comprobar su funcionamiento
+ * 
+ * 
  * @author macky
  */
 public class Rectangulo {
     
-    int x1, x2;
-    int y1, y2; 
+    // Datos de la clase
+    private int x1, y1;
+    private int x2, y2; 
     
+    // Constructor.
     public Rectangulo(int x1, int y1, int x2, int y2){
     
         if(x1 < x2 && y1 < y2){
@@ -23,6 +35,7 @@ public class Rectangulo {
         
     }
     
+    // Setters cambiar Datos
     public void setRectanguloX1 (int x1 ){
         
         if ( x1 > this.x2){
@@ -55,6 +68,8 @@ public class Rectangulo {
 
     }
 
+    
+    // Getters Sacar Datos
     public int getRectanguloX1 (){        
         return x1;
     }
@@ -71,4 +86,30 @@ public class Rectangulo {
         return y2;
     }
 
+    // Impresión de Datos.
+    public void impresionDatos(){
+        System.out.printf("Rectangulo p1(%d,%d) p2(%d,%d)\n\n", x1, y1, x2, y2); 
+    }
+    
+    public void setX1Y1(int x, int y){
+        this.x1 = x; this.y1 = y;
+    }
+    
+    public void setX2Y2(int x, int y){
+        this.x2 = x; this.y2 = y;
+    }
+        
+    public void setAll(int x1, int y1, int x2, int y2){
+        this.x1 = x1; this.y1 = y1;
+        this.x2 = x2; this.y2 = y2;
+    }
+    
+    public int area (){
+        return Math.abs(x1 - x2) * Math.abs(y1 - y2);
+    }
+    
+    public int perimetro (){
+        return (Math.abs(x1 - x2) + Math.abs(y1 - y2)) * 2;
+    }
+    
 }

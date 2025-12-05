@@ -32,31 +32,26 @@ public class EjercicicoRectangulo {
         // Imprime coordenadas, perímetro y area de los objetos creados.
         System.out.printf("Rectangulo 1 coordenadas (%d,%d),(%d,%d); Perímetro %dcm, Area %dcm2\n\n",
         recta1.getRectanguloX1(),recta1.getRectanguloY1(),recta1.getRectanguloX2(),recta1.getRectanguloY2(),
-        Math.abs(recta1.getRectanguloX1()-recta1.getRectanguloX2())*2+Math.abs(recta1.getRectanguloY1()-recta1.getRectanguloY2())*2,
-        Math.abs(recta1.getRectanguloX1()-recta1.getRectanguloX2())*Math.abs(recta1.getRectanguloY1()-recta1.getRectanguloY2()));
+        recta1.perimetro(),recta1.area());
         
         System.out.printf("Rectangulo 2 coordenadas (%d,%d),(%d,%d); Perímetro %dcm, Area %dcm2\n\n",
         recta2.getRectanguloX1(),recta2.getRectanguloY1(),recta2.getRectanguloX2(),recta2.getRectanguloY2(),
-        Math.abs(recta2.getRectanguloX1()-recta2.getRectanguloX2())*2+Math.abs(recta2.getRectanguloY1()-recta2.getRectanguloY2())*2,
-        Math.abs(recta2.getRectanguloX1()-recta2.getRectanguloX2())*Math.abs(recta2.getRectanguloY1()-recta2.getRectanguloY2()));
+        recta2.perimetro(), recta2.area());
        
         // Modificación de los parametros de los objetos con valores aceptados.
-        recta1.setRectanguloX1(1); recta1.setRectanguloY1(2);
-        recta1.setRectanguloX2(5); recta1.setRectanguloY2(6);
+        recta1.setAll(1,4,5,8);
         
-        recta2.setRectanguloX1(3); recta2.setRectanguloY1(7);
-        recta2.setRectanguloX2(5); recta2.setRectanguloY2(9);
+        recta2.setX1Y1(3,7);
+        recta2.setX2Y2(5,9);
         
         // Imprime coordenadas, perímetro y area de los objetos con los valores modificados.
         System.out.printf("Rectangulo 1 coordenadas (%d,%d),(%d,%d); Perímetro %dcm, Area %dcm2\n\n",
         recta1.getRectanguloX1(),recta1.getRectanguloY1(),recta1.getRectanguloX2(),recta1.getRectanguloY2(),
-        Math.abs(recta1.getRectanguloX1()-recta1.getRectanguloX2())*2+Math.abs(recta1.getRectanguloY1()-recta1.getRectanguloY2())*2,
-        Math.abs(recta1.getRectanguloX1()-recta1.getRectanguloX2())*Math.abs(recta1.getRectanguloY1()-recta1.getRectanguloY2()));
+        recta1.perimetro(),recta1.area());
         
         System.out.printf("Rectangulo 2 coordenadas (%d,%d),(%d,%d); Perímetro %dcm, Area %dcm2\n\n",
         recta2.getRectanguloX1(),recta2.getRectanguloY1(),recta2.getRectanguloX2(),recta2.getRectanguloY2(),
-        Math.abs(recta2.getRectanguloX1()-recta2.getRectanguloX2())*2+Math.abs(recta2.getRectanguloY1()-recta2.getRectanguloY2())*2,
-        Math.abs(recta2.getRectanguloX1()-recta2.getRectanguloX2())*Math.abs(recta2.getRectanguloY1()-recta2.getRectanguloY2()));
+        recta2.perimetro(),recta2.area());
                 
     }
     
