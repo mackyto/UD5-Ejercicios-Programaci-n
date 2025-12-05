@@ -55,6 +55,23 @@ public class EjercicioArticulo {
         // Imprime resultado con inflación.
         System.out.printf("%s - Precio:%.2f - IVA:%d - PVP %.2f\n\n", articulo.getArticulosNombre(), articulo.getArticuloPrecioSinIva(), articulo.getArticuloIva(), articulo.getArticuloPrecioSinIva() + articulo.getArticuloPrecioSinIva() * articulo.getArticuloIva() /100);
         
+        // vende 13 articulos.
+        if(articulo.venta(13)){
+            System.out.println("Venta realizada con exito");
+        }else{
+            System.err.println("Error en la assignacion, no hay existencias para acometer la operación ");
+        }
+        
+        articulo.imprimir();
+        
+        // Devolución de los articulos.
+        if(articulo.archivar(13)){
+            System.out.println("Operación realizada con exito");
+        }else{
+            System.err.println("Error en la assignacion, datos no válidos. ");
+        } 
+        
+        articulo.imprimir();
         
     }
     
