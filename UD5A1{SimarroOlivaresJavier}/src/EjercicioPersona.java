@@ -54,15 +54,15 @@ public class EjercicioPersona {
         persona2.setPersonaEdad(kl.nextInt());
 
         System.out.printf("%s %s con DNI %s ", persona1.getPersonaNombre(), persona1.getPersonaApellidos(), persona1.getPersonaDni()); // Imprime los resultados del primer objeto.
-        if (persona1.esMayorEdad()){System.out.print("no ");}
+        if (!persona1.esMayorEdad()){System.out.print(" no ");}
         System.out.print("es mayor de edad");
         if (persona1.esjubilado()){System.out.print(" y es jubilado");}        
         System.out.println();
         
         persona2.impresion(); // Imprime los resultados del segundo objeto.
-        if (persona2.getPersonaEdad() < 18){System.out.print("no ");}
+        if (!persona2.esMayorEdad()){System.out.print(" no ");}
         System.out.print("es mayor de edad");
-        if (persona1.esjubilado()){System.out.print(" y es jubilado");}   
+        if (persona2.esjubilado()){System.out.print(" y es jubilado");}   
         System.out.println();
         
         System.out.println("y la diferencia de Edad entre ambos es de " + persona1.diferenciaEdad(persona2.getPersonaEdad()) + " años");
