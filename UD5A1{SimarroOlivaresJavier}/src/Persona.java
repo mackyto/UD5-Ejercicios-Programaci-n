@@ -23,6 +23,7 @@ public class Persona {
     private String nombre;
     private String apellidos;
     private int edad;
+    private static final int MIN_ADULTO = 18;
 
     // Constructor todos los parametros. con match "[0-9]{8}a-zA-Z" para el DNi.
     public Persona(String nombre, String apellidos, String dni, int edad) {
@@ -112,4 +113,10 @@ public class Persona {
 
     }
 
+    public static boolean mayorEdad (Persona Persona){
+        if(Persona.edad > MIN_ADUlTO){
+            return true;
+        }
+    }
+    
 }
