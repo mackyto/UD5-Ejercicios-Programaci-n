@@ -70,7 +70,7 @@ public class EjercicioPunto {
         Punto p3 = Punto.crearPuntoAleatorio();        
         
         // Imprime datos de los objetos creados aleatoriamnete.
-        System.out.println();System.out.println();
+        System.out.println();System.out.println("Puntos Aleatorios creados");
         p1.imprime();p2.imprime();p3.imprime();
         
     }
