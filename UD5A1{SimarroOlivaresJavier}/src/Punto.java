@@ -23,6 +23,13 @@
  * 
  *      Prueba a utilizar estos métodos desde el main para comprobar su funcionamiento
  * 
+ * 5.1. Crea un método estático en Punto que se llame crearPuntoAleatorio y que
+ *      devuelva un objeto de tipo Punto con unas coordenadas generadas al azar
+ *      entre -100 y 100. Para generar un número aleatorio, puedes utilizar la
+ *      clase Random, o bien el método estático random() de la clase Math.
+ *      Puedes encontrar ejemplos en https://www.baeldung.com/java-generating-random-numbers-in-
+ *      range. Crea varios puntos aleatorios en el main y muéstralos por pantalla.
+ * 
  * @author macky
  */
 public class Punto {
@@ -56,7 +63,7 @@ public class Punto {
     }
     
     // Imprime Cooordenadas del punto.
-    public void puntoImprime (){
+    public void imprime (){
         System.out.println("Las coordenasdas del punto son (" + x + "," + y + ")");
     }
     
@@ -67,14 +74,22 @@ public class Punto {
     }
     
     // Modificador de desplazamiento.
-    public void puntoDesplaza(int dx, int dy){
+    public void desplaza(int dx, int dy){
         this.x += dx;
         this.y += dy;
     }
 
     // Obtien la distancia entre dos puntos.
-    public double puntoDistancia(int x, int y){
+    public double distancia(int x, int y){
         return Math.sqrt(Math.pow((x - this.x), 2) + Math.pow((y - this.y), 2));
     }
 
+    // Metodo estático para crear puntos aleatorios.
+    public static Punto crearPuntoAleatorio() {
+        int x = (int)(Math.random() * 202 - 101);
+        int y = (int)(Math.random() * 202 - 101);
+        return new Punto(x, y);
+    }
+    
+    
 }

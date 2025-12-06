@@ -56,13 +56,22 @@ public class EjercicioPunto {
         System.out.println();
         
         // Prueba el método desplazamiento.
-        primer.puntoDesplaza(3, -2); segun.setPuntoXY(-5, 2); tercer.puntoDesplaza(0, 4);
+        primer.desplaza(3, -2); segun.setPuntoXY(-5, 2); tercer.desplaza(0, 4);
 
         // Prueba del método  puntoImpresión.
-        primer.puntoImprime(); segun.puntoImprime(); tercer.puntoImprime();
+        primer.imprime(); segun.imprime(); tercer.imprime();
         
         // Prueba el método distancia.
-        System.out.println("Distancia entre el punto uno y el punto tres = " + primer.puntoDistancia(tercer.getPuntoX(), tercer.getPuntoY()));
+        System.out.println("Distancia entre el punto uno y el punto tres = " + primer.distancia(tercer.getPuntoX(), tercer.getPuntoY()));
+        
+        // Prueba del metodo estático para crear puntos.
+        Punto p1 = Punto.crearPuntoAleatorio();
+        Punto p2 = Punto.crearPuntoAleatorio();
+        Punto p3 = Punto.crearPuntoAleatorio();        
+        
+        // Imprime datos de los objetos creados aleatoriamnete.
+        System.out.println();System.out.println();
+        p1.imprime();p2.imprime();p3.imprime();
         
     }
     
