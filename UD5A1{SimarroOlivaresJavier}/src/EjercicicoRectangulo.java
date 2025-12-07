@@ -27,7 +27,7 @@ public class EjercicicoRectangulo {
     public static void main(String[] args){
         
         Rectangulo recta1 = new Rectangulo(0,0,5,5); // Instancia y carga parametros en los objetos rectangulo.
-        Rectangulo recta2 = new Rectangulo(7,9,2,3);
+        Rectangulo recta2 = new Rectangulo(7,9,20,30);
 
         // Imprime coordenadas, perímetro y area de los objetos creados.
         System.out.printf("Rectangulo 1 coordenadas (%d,%d),(%d,%d); Perímetro %dcm, Area %dcm2\n\n",
@@ -39,7 +39,7 @@ public class EjercicicoRectangulo {
         recta2.perimetro(), recta2.area());
        
         // Modificación de los parametros de los objetos con valores aceptados.
-        recta1.setAll(1,4,5,8);
+        recta1.setAll(10,40,50,80);
         
         recta2.setX1Y1(3,7);
         recta2.setX2Y2(5,9);
@@ -52,6 +52,9 @@ public class EjercicicoRectangulo {
         System.out.printf("Rectangulo 2 coordenadas (%d,%d),(%d,%d); Perímetro %dcm, Area %dcm2\n\n",
         recta2.getRectanguloX1(),recta2.getRectanguloY1(),recta2.getRectanguloX2(),recta2.getRectanguloY2(),
         recta2.perimetro(),recta2.area());
+        
+        Rectangulo r1 = Rectangulo.hacerRectangulo();
+        r1.impresionDatos();
                 
     }
 

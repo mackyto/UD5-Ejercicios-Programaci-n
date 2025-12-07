@@ -45,7 +45,7 @@ public class Rectangulo {
     // Setters cambiar Datos
     public void setRectanguloX1 (int x1 ){
         
-        if ( x1 < this.x2 && x1 >= MIN && x1<= MAX{
+        if ( x1 < this.x2 && x1 >= MIN && x1<= MAX){
             this.x1 = x1;
          }else{
             System.err.println("ERROR COORDENADA X1 FUERA DE RANGO..");
@@ -65,7 +65,7 @@ public class Rectangulo {
 
     public void setRectanguloX2 (int x2 ){
         
-        if ( x2 < this.x2 && x2 >= MIN && x2<= MAX{
+        if ( x2 > this.x1 && x2 >= MIN && x2<= MAX){
             this.x2 = x2;
          }else{
             System.err.println("ERROR COORDENADA X2 FUERA DE RANGO..");
@@ -75,7 +75,7 @@ public class Rectangulo {
     
     public void setRectanguloY2 (int y2 ){
         
-        if ( y2 < this.y1 && y2 >= min && y2<= max{
+        if ( y2 > this.y1 && y2 >= MIN && y2 <= MAX){
             this.y2 = y2;
          }else{
             System.err.println("ERROR COORDENADA Y2 FUERA DE RANGO..");
@@ -164,11 +164,14 @@ public class Rectangulo {
         return (Math.abs(x1 - x2) + Math.abs(y1 - y2)) * 2;
     }
    
-    public static void hacerRectangulo (){
+    public static Rectangulo hacerRectangulo (){
         
-        this.x1 = (int)(Math.random()*100);
-        
-        
+        int x1 = (int)(Math.random() * 100);
+        int y1 = (int)(Math.random() * 100);
+        int x2 = (int)(Math.random() * (101-x1) + x1);
+        int y2 = (int)(Math.random() * (101-y1) + y1);        
+        return new Rectangulo(x1, y1, x2, y2);
+
     }
     
 }
