@@ -36,6 +36,7 @@ public class Punto {
     
     private int x;
     private int y;
+    private int j;
     
     // constructor con todos los párametros.
     public Punto(int x, int y){
@@ -90,6 +91,6 @@ public class Punto {
         int y = (int)(Math.random() * 202 - 101);
         return new Punto(x, y);
     }
-    
+
     
 }
