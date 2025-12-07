@@ -114,9 +114,9 @@ public class Persona {
     }
 
     public static boolean mayorEdad (Persona Persona){
-        if(Persona.edad > MIN_ADUlTO){
+        if(Persona.edad > MIN_ADULTO){
             return true;
-        }
+        }else{return false;}
     }
     
 }
