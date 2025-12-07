@@ -20,11 +20,15 @@ public class Articulo {
     // Datos de la clase
     private String nombre;
     private double precioSinIva;
-    private int iva;
+    private int tipIva;
     private int existencias;
+    private static int IVA_G = 21;
+    private static int IVA_R = 7;   
+    private static int IVA_SR = 4;   
+    private static int[] IVA = {0, 21, 7, 4};
     
     // Constructor completo de objeto.
-    public Articulo(String nombre, double precioSinIva, int iva, int existencias){
+    public Articulo(String nombre, double precioSinIva, int tipIva, int existencias){
         
         // Verificación de datos.
         //
@@ -33,11 +37,11 @@ public class Articulo {
         //      existencias, valor positivo.
         //      iva, valor positivo.
         //
-        if(nombre.matches("[a-zA-Z]+") && precioSinIva >= 10 && existencias > 0 && iva > 0){
+        if(nombre.matches("[a-zA-Z]+") && precioSinIva >= 0 && tipIva > 0 && tipIva <4 && existencias > 0){
             
             this.nombre = nombre;
             this.precioSinIva = precioSinIva;
-            this.iva = iva;
+            this.tipIva = tipIva;
             this.existencias = existencias;
             
         }else{System.err.println("Alguno de los valores nombre, precio, iva o existencias no son válidos.");}
@@ -55,8 +59,8 @@ public class Articulo {
         }else{System.err.println("¡¡¡ERROR!!! en el precio sin iva");}
     }
     
-    public void setArticuloIva (int iva){
-        if(iva > 0 && iva < 100){this.iva = iva;
+    public void setArticuloTipoIva (int tipIva){
+        if(tipIva > 0 && tipIva < 4){this.tipIva = tipIva;
         }else{System.err.println("¡¡¡ERROR!!! la fiscalidad no tiene sentido");}
     }
     
@@ -75,7 +79,7 @@ public class Articulo {
     }
     
     public int getArticuloIva (){
-        return iva;
+        return IVA[tipIva];
     }
     
     public int getArticuloExistencias (){
@@ -87,20 +91,20 @@ public class Articulo {
         System.out.println("------------------------------------------------------------");
         System.out.println("Nombre: " + nombre);
         System.out.println("Precio sin iva: " + precioSinIva);
-        System.out.println("Iva: " + iva);
+        System.out.println("Iva: " + IVA[tipIva]);
         System.out.println("Exixtencias: " + existencias);
         System.out.println("------------------------------------------------------------");
     }
     
     // calcula precio mas iva
     public double getPVP(){
-        return precioSinIva + precioSinIva * iva /100;
+        return precioSinIva + precioSinIva * IVA[tipIva]/100;
     }
     
     // Calcula el precio mas iva con descuento
     public double getPVPDescuento(int descuento){
         double precioDescuento =  precioSinIva - precioSinIva * descuento /100;
-        return precioDescuento + precioDescuento * iva /100; 
+        return precioDescuento + precioDescuento * IVA[tipIva] /100; 
     }
     
     // Elimina unidades de inventario si es posible.

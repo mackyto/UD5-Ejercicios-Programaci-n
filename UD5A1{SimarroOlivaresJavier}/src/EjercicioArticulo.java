@@ -28,8 +28,9 @@
 public class EjercicioArticulo {
     
     public static void main(String[] args){
-        
-        Articulo articulo = new Articulo("Pijama", 10, 21, 100); // Instancia el objeto pijama y assigna valores a sus atributos.
+
+//      Instancia el objeto pijama y assigna valores a sus atributos.
+        Articulo articulo = new Articulo("Pijama", 10.50, 1, 100); 
         
 //        articulo.nombre = "Pijama";
 //        articulo.precioSinIva = 10;
