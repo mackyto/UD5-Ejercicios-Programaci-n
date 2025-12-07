@@ -24,6 +24,8 @@
  */
 public class EjercicioPunto {
     
+    public final String ROJO = "\u0001B[32m";
+    
     public static void main(String[] args){
         
         // Inicia las instancias y carga valores a los objetos con el constructor.
