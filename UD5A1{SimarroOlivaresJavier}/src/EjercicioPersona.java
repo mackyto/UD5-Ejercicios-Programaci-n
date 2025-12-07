@@ -24,7 +24,7 @@ import java.util.Scanner;
  * @author macky
  */
 public class EjercicioPersona {
-    
+
     public static void main(String[] args){
         
         Scanner kl = new Scanner(System.in); // Declara Instancias Scanner y persona
@@ -67,7 +67,6 @@ public class EjercicioPersona {
         
         System.out.println("y la diferencia de Edad entre ambos es de " + persona1.diferenciaEdad(persona2.getPersonaEdad()) + " años");
         
-        kl.close();
         
         // Imprime los resultados del primer objeto.
         System.out.printf("%s %s con DNI %s ", persona2.getPersonaNombre(), persona2.getPersonaApellidos(), persona2.getPersonaDni());
@@ -75,6 +74,7 @@ public class EjercicioPersona {
         System.out.println(" es mayor de edad");        
         System.out.println();
         
+        kl.close();
         
     }
     

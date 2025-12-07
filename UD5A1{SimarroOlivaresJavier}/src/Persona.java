@@ -108,15 +108,17 @@ public class Persona {
         return (edad >= 65);
     }
 
+    // Cálcula la diferencia de edad entre una edad y el objeto de referencia.
     public int diferenciaEdad(int edad) {
         return Math.abs(this.edad - edad);
 
     }
 
+    // Método estático de cácculo de  mayoria de edad con constante.
     public static boolean mayorEdad (Persona Persona){
         if(Persona.edad > MIN_ADULTO){
             return true;
         }else{return false;}
     }
-    
+ 
 }

@@ -54,5 +54,5 @@ public class EjercicicoRectangulo {
         recta2.perimetro(),recta2.area());
                 
     }
-    
+
 }

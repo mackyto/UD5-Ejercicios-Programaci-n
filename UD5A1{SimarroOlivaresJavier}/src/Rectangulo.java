@@ -18,53 +18,68 @@
  * @author macky
  */
 public class Rectangulo {
-    
+ 
     // Datos de la clase
     private int x1, y1;
-    private int x2, y2; 
+    private int x2, y2;
+    private static final int MIN = 0, MAX = 100;
+    private static boolean error = false;
     
     // Constructor.
     public Rectangulo(int x1, int y1, int x2, int y2){
     
         if(x1 < x2 && y1 < y2){
 
-            this.x1 = x1; this.y1 = y1;
-            this.x2 = x2; this.y2 = y2;
+            if (MIN <= x1 && MAX >= x1){this.x1 = x1;}else{error = true;} 
+            if (MIN <= y1 && MAX >= y1){this.y1 = y1;}else{error = true;} 
+            if (MIN <= x2 && MAX >= x2){this.x2 = x2;}else{error = true;} 
+            if (MIN <= y2 && MAX >= y2){this.y2 = y2;}else{error = true;} 
             
-        }else{System.err.println("ERROR al instanciar Rectangulo..");}
+        }else{error = true;} 
+        
+        if (error){System.err.println("ERROR al instanciar Rectangulo..");}
+        error = false;
         
     }
     
     // Setters cambiar Datos
     public void setRectanguloX1 (int x1 ){
         
-        if ( x1 > this.x2){
+        if ( x1 < this.x2 && x1 >= MIN && x1<= MAX{
+            this.x1 = x1;
+         }else{
             System.err.println("ERROR COORDENADA X1 FUERA DE RANGO..");
-        }else{this.x1 = x1;}    
+        }    
         
     }
     
     public void setRectanguloY1 (int y1 ){
         
-        if ( y1 > this.y2){
+        if ( y1 < this.y2 && y1>= MIN && y1 <= MAX){
+            this.y1 = y1;
+         }else{
             System.err.println("ERROR COORDENADA Y1 FUERA DE RANGO..");
-        }else{this.y1 = y1;}
+        } 
 
     }
 
     public void setRectanguloX2 (int x2 ){
         
-        if ( x2 < this.x1){
+        if ( x2 < this.x2 && x2 >= MIN && x2<= MAX{
+            this.x2 = x2;
+         }else{
             System.err.println("ERROR COORDENADA X2 FUERA DE RANGO..");
-        }else{this.x2 = x2;}    
+        }    
         
     }
     
     public void setRectanguloY2 (int y2 ){
         
-        if ( y2 < this.y1){
+        if ( y2 < this.y1 && y2 >= min && y2<= max{
+            this.y2 = y2;
+         }else{
             System.err.println("ERROR COORDENADA Y2 FUERA DE RANGO..");
-        }else{this.y2 = y2;}
+        } 
 
     }
 
@@ -91,25 +106,69 @@ public class Rectangulo {
         System.out.printf("Rectangulo p1(%d,%d) p2(%d,%d)\n\n", x1, y1, x2, y2); 
     }
     
+    // Setters multicoordenadas.
     public void setX1Y1(int x, int y){
-        this.x1 = x; this.y1 = y;
+    
+        if(x1 < this.x2 && y1 < this.y2){
+
+            if (MIN <= x1 && MAX >= x1){this.x1 = x1;}else{error = true;} 
+            if (MIN <= y1 && MAX >= y1){this.y1 = y1;}else{error = true;} 
+            
+        }else{error = true;} 
+        
+        if (error){System.err.println("ERROR al instanciar Rectangulo..");}
+        
+        error = false;
+        
     }
     
     public void setX2Y2(int x, int y){
-        this.x2 = x; this.y2 = y;
+    
+        if(this.x1 < x2 && this.y1 < y2){
+
+            if (MIN <= x2 && MAX >= x2){this.x2 = x2;}else{error = true;} 
+            if (MIN <= y2 && MAX >= y2){this.y2 = y2;}else{error = true;} 
+            
+        }else{error = true;} 
+        
+        if (error){System.err.println("ERROR al instanciar Rectangulo..");}
+        
+        error = false;
+        
     }
         
     public void setAll(int x1, int y1, int x2, int y2){
-        this.x1 = x1; this.y1 = y1;
-        this.x2 = x2; this.y2 = y2;
+    
+        if(x1 < x2 && y1 < y2){
+
+            if (MIN <= x1 && MAX >= x1){this.x1 = x1;}else{error = true;} 
+            if (MIN <= y1 && MAX >= y1){this.y1 = y1;}else{error = true;} 
+            if (MIN <= x2 && MAX >= x2){this.x2 = x2;}else{error = true;} 
+            if (MIN <= y2 && MAX >= y2){this.y2 = y2;}else{error = true;} 
+            
+        }else{error = true;} 
+        
+        if (error){System.err.println("ERROR DE RANGO DE COORDENADAS");}
+        
+        error = false;        
+        
     }
     
+    // Cálculo de Área (suma de lados).
     public int area (){
         return Math.abs(x1 - x2) * Math.abs(y1 - y2);
     }
     
+    // Cálculo de Perimetro (base x altura).
     public int perimetro (){
         return (Math.abs(x1 - x2) + Math.abs(y1 - y2)) * 2;
+    }
+   
+    public static void hacerRectangulo (){
+        
+        this.x1 = (int)(Math.random()*100);
+        
+        
     }
     
 }
