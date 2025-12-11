@@ -6,6 +6,7 @@
 package nominas;
 import java.time.LocalDate;
 import java.time.Month;
+import java.util.Scanner;
 
 /**
  * 
@@ -22,34 +23,81 @@ public class Nominas {
 
     public static void main(String[] args) {
 
+        // Instancia las clases de datos.
         Tabla tS25 = new Tabla();
         Cotizacion cc = new Cotizacion();
         Complementos cpt = new Complementos();
         LocalDate fechaActual = LocalDate.now();
-                
-        String nombre, apellidos;
-        String dni;
-        int categoria, grupo;
-        int trienios;
+        Todos todos = new Todos();                
+        Scanner kl = new Scanner(System.in);
+        
+        //Declara las variables.
+        int i;
+        
+        System.out.println("Indique La opción:");
+        System.out.println();
+        System.out.println("1 - Imprimir nómina");
+        System.out.println();
+        System.out.println("2 - Añadir Datos");
+        System.out.println();
+        System.out.println("3 - Terminar");
+
+        int opcion = kl.nextInt();
+        
+        switch (opcion) {
+        
+        case 1: 
+        
+        case 2: 
     
-        System.out.println(tS25.getBase(4,1));
+        case 3: break;
         
-        System.out.println(cc.getBaseMinima(cc.getTramo(2157.85)));
-        System.out.println(cc.getBaseMaxima(cc.getTramo(2157.85)));
-        System.out.println(cc.getTramoMinimo(cc.getTramo(2157.85)));
-        System.out.println(cc.getTramoMaximo(cc.getTramo(2157.85)));
-        
-        System.out.println(cpt.getComplementoDestino());
-        System.out.println(cpt.getComplementoEspecifico(3));
+        default: System.out.println("opcion no valida"); 
 
+        }
+    
+    }    
+        
+    
+    public int seleccionarDatos(){
+        
+        Todos todos = new Todos();  
+        Scanner kl = new Scanner(System.in);
+        int i, seleccion;
+        
+        System.out.println();System.out.println();
+        System.out.println("Empleado");
+        System.out.println();
+        
+        for (i = 0; i < todos.getPersonal().size(); i++){
+        
+            System.out.printf("%d - %s", i + 1, todos.getPersonal().get(i).getNombreCompleto());
+        
+        }
+        do{
 
-        Month mes = fechaActual.getMonth();
+            seleccion = kl.nextInt() - 1;
+                     
+        }while(seleccion < 0 || seleccion < todos.getPersonal().size());
         
-        System.out.println(fechaActual.getYear());
-        System.out.println(fechaActual.getMonthValue());
-        System.out.println(mes);        
-        
+        return seleccion;
         
     }
     
+    public void imprimirNomina(){
+        
+        Todos todos = new Todos();  
+        Scanner kl = new Scanner(System.in);
+        int i = seleccionarDatos();
+                
+        System.out.printf("Empresa. \t\t\t\t\t\t\t Trabajador\n");
+        System.out.printf("MAZCU.FIT S.L. \t\t\t\t\t\t\t %s\n\n", todos.getPersonal().get(1).getNombreCompleto());
+                
+                
+        
+    }
+
+
+    
+        
 }

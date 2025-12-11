@@ -16,8 +16,10 @@ public class Empleado {
     private int trienios;
     private String calle, ciudad, provincia;
     private int numero, cp;
-   
-    public Empleado (String nombre,String apellidos,String dni,String nss,String calle,int numero,String ciudad,String provincia,int cp,int categoria,int grupo,int nivel) {
+    private int antiguedad;
+    private String puesto;
+    
+    public Empleado (String nombre,String apellidos,String dni,String nss,String calle,int numero,String ciudad,String provincia,int cp,int categoria,int grupo,int nivel,int antiguedad, String puesto) {
         
         this.nombre = nombre;
         this.apellidos = apellidos;
@@ -31,6 +33,8 @@ public class Empleado {
         this.categoria = categoria;
         this.grupo = grupo;
         this.nivel = nivel;
+        this.antiguedad = antiguedad;
+        this.puesto = puesto;
         
     }
     
@@ -48,6 +52,8 @@ public class Empleado {
     public int getCategoria(){return categoria;}
     public int getGrupo(){return grupo;}
     public int getNivel(){return nivel;}
+    public int getAntiguedad(){return antiguedad;}
+    public String getPuesto(){return puesto;}
  
     // Setters
     public void setNombre(String nombre){this.nombre = nombre;}
@@ -62,5 +68,7 @@ public class Empleado {
     public void setCategoria(int categoria){this.categoria = categoria;}
     public void setGrupo(int grupo){this.grupo = grupo;}
     public void setNivel(int nivel){this.nivel = nivel;}
-    
+    public void setAntiguedad(int antiguedad){this.antiguedad = antiguedad;}
+    public void setPuestto(String puesto){this.puesto = puesto;}
+
 }

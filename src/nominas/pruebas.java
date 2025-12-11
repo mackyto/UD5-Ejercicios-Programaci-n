@@ -19,33 +19,15 @@ public class pruebas {
         Cotizacion cc = new Cotizacion();
         Complementos cpt = new Complementos();
         LocalDate fechaActual = LocalDate.now();
-                
-        String nombre, apellidos;
-        String dni;
-        int categoria, grupo;
-        int trienios;
-    
-        System.out.println(tS25.getBase(4,1));
-        
-        System.out.println(cc.getBaseMinima(cc.getTramo(2157.85)));
-        System.out.println(cc.getBaseMaxima(cc.getTramo(2157.85)));
-        System.out.println(cc.getTramoMinimo(cc.getTramo(2157.85)));
-        System.out.println(cc.getTramoMaximo(cc.getTramo(2157.85)));
-        
-        System.out.println(cpt.getComplementoDestino());
-        System.out.println(cpt.getComplementoEspecifico(3));
-
-
-        Month mes = fechaActual.getMonth();
-        
-        System.out.println(fechaActual.getYear());
-        System.out.println(fechaActual.getMonthValue());
-        System.out.println(mes);        
-        
         Todos todos = new Todos();
+        int i = 1;
         
-        System.out.println(todos.getPersonal().get(1).getNombreCompleto());
-        
+        System.out.printf("Empresa. \t\t\t\t\t\t\t\t\t Trabajador\n");
+        System.out.printf("MAZCU.FIT S.L. \t\t\t\t\t\t\t\t\t %s\n", todos.getPersonal().get(i).getNombreCompleto());
+        System.out.printf("Dirección de Empresa \t\t\t\t\t\t\t\t %s, %d\n", todos.getPersonal().get(i).getCalle(), todos.getPersonal().get(i).getNumero());
+        System.out.printf("46940 Manises (Valencia)\t\t\t\t\t\t\t %d %s %s\n", todos.getPersonal().get(i).getCp(), todos.getPersonal().get(i).getCiudad(), todos.getPersonal().get(i).getProvincia());
+        System.out.printf("CIF: A12345678 \t\t\t\t\t\t\t\t\t NIF: %s\t NSS: %s\n\n", todos.getPersonal().get(i).getDni(), todos.getPersonal().get(i).getNss());
+        System.out.printf("Cuenta de Contratación \t\t\t\t\t\t\t\t\t Puesto %s\n\n", todos.getPersonal().get(i).getDni(), todos.getPersonal().get(i).getNss());     
         
     } 
 
