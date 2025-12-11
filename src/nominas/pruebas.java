@@ -1,24 +1,17 @@
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-
 package nominas;
+
 import java.time.LocalDate;
 import java.time.Month;
 
 /**
- * 
- * 
- * 
+ *
  * @author macky
  */
-
-public class Nominas {
-
-    /**
-     * @param args the command line arguments
-     */
+public class pruebas {
 
     public static void main(String[] args) {
 
@@ -49,7 +42,11 @@ public class Nominas {
         System.out.println(fechaActual.getMonthValue());
         System.out.println(mes);        
         
+        Todos todos = new Todos();
         
-    }
-    
+        System.out.println(todos.getPersonal().get(1).getNombreCompleto());
+        
+        
+    } 
+
 }

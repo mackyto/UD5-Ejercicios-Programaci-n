@@ -23,6 +23,8 @@ public class Tabla {
         {4,2,16119.49,1151.39, 9.20,3,1.38,172.71},
         {5,1,16071.12,1147.94, 9.17,3,1.38,172.19}
     };
+    
+    private final double ANTIGUEDAD = 33.27;
 
     public double getBase(int grupo, int nivel) {
         
@@ -108,5 +110,6 @@ public class Tabla {
     
         }  
         
+        public double getAntiguedad() { return ANTIGUEDAD;}
         
 }
