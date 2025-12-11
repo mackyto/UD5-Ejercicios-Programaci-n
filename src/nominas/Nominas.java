@@ -22,6 +22,7 @@ public class Nominas {
 
         Tabla tS25 = new Tabla();
         Cotizacion cc = new Cotizacion();
+        Complementos cpt = new Complementos();
         
         String nombre, apellidos;
         String dni;
@@ -35,7 +36,8 @@ public class Nominas {
         System.out.println(cc.getTramoMinimo(cc.getTramo(2157.85)));
         System.out.println(cc.getTramoMaximo(cc.getTramo(2157.85)));
         
-        
+        System.out.println(cpt.getComplementoDestino());
+        System.out.println(cpt.getComplementoEspecifico(3));
 
     }
     

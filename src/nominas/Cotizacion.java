@@ -25,7 +25,6 @@ public class Cotizacion {
             
     };
     
-    
     public double getTramoMinimo(int tramo){
         return TABLA[0][tramo];
     }
@@ -44,12 +43,10 @@ public class Cotizacion {
     
     public int getTramo(double sueldo){
         
-        int tramo = 0;
-        
         for (int i = 0; i < TABLA[0].length; i++){
             
             if (TABLA[0][i] < sueldo && TABLA[1][i] > sueldo ){
-                 System.err.println(i);
+
                 return i;
                 
             }
@@ -59,7 +56,5 @@ public class Cotizacion {
         return -1;
         
     }
-    
-    
     
 }
