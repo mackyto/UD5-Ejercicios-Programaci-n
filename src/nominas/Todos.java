@@ -31,7 +31,7 @@ public class Todos {
         personal.add(sporticus);
         personal.add(other);
 
-        System.out.println("Se han añadido " + personal.size() + " empleados");
+    //    System.out.println("Se han añadido " + personal.size() + " empleados");
         
     } 
     
