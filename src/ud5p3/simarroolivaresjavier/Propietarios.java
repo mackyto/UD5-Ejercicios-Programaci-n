@@ -8,6 +8,7 @@ package ud5p3.simarroolivaresjavier;
  *
  * @author macky
  */
+
 public class Propietarios {
     
     private String nombre;

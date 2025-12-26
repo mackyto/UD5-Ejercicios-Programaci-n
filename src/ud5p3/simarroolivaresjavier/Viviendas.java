@@ -20,6 +20,7 @@ public class Viviendas {
     private Contratos contrato;
     private Propietarios propietario;
     
+    // Constructor.
     public Viviendas (String direccion, double tamaño, int habitaciones, int baños, Contratos contrato, Propietarios propietario){
         
         this.direccion = direccion;
@@ -31,7 +32,7 @@ public class Viviendas {
         
     }
 
-        // Setters
+        // Setters.
         public void setDireccion (String direccion){
         
             this.direccion = direccion;
@@ -68,7 +69,7 @@ public class Viviendas {
         
         }
     
-        // Getteres
+        // Getteres.
         public String getDireccion (){
         
             return direccion;

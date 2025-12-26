@@ -9,7 +9,9 @@ import java.time.LocalDate;
 /**
  *
  * @author macky
+ * 
  */
+
 public class Clientes {
     
     private String nombre;
@@ -41,6 +43,80 @@ public class Clientes {
     }    
     
     
+    // Setters.
+    public void setNombre (String nombre){
+    
+        this.nombre = nombre;
+        
+    }
+    
+    public void setApellidos (String apellidos){
+    
+        this.apellidos = apellidos;
+    
+    }
+
+    public void setFechaNacimiento (LocalDate fechaNacimiento){
+        
+        this.fechaNacimiento = fechaNacimiento;
+    
+    }
+    
+    public void setNomina (double nomina){
+        
+        this.nomina = nomina;
+        
+    }
+    
+    public void setBalance (){
+    
+        this.balance = balance;
+        
+    }
+    
+    public void setconttrato (Contratos contrato){
+    
+        this.contrato = contrato;
+    
+    }
+    
+    
+    // Getters.
+    public String getNombre (){
+    
+        return nombre;
+        
+    }
+    
+    public String getApellidos (){
+    
+        return apellidos;
+    
+    }
+
+    public LocalDate getFechaNacimiento (){
+        
+        return fechaNacimiento;
+    
+    }
+    
+    public double getNomina (){
+        
+        return nomina;
+        
+    }
+    
+    public double getBalance (){
+    
+        return balance;
+        
+    }
+    
+    public Contratos getcontrato (){
+    
+        return contrato;
+    
+    }
     
     
 }
