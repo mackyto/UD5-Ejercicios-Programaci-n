@@ -26,11 +26,20 @@ public class Clientes {
         this.fechaNacimiento = fechaNacimiento;
         this.nomina = nomina;
         this.balance = balance;
-        
-        
-        
-        
+        this.contrato = contrato;
+              
     }
+
+    public Clientes(String nombre, String apellidos, LocalDate fechaNacimiento, double nomina, double balance){
+        
+        this.nombre = nombre;
+        this.apellidos = apellidos;
+        this.fechaNacimiento = fechaNacimiento;
+        this.nomina = nomina;
+        this.balance = balance;
+              
+    }    
+    
     
     
     
